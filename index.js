@@ -1,4 +1,7 @@
 require('dotenv').config();
+//require('./env');
+//console.log(process.env.JWT_SECRET);
+  
 
 const express = require('express');
 const server = express();
@@ -39,8 +42,8 @@ server.use('/api', apiRouter);
   });
 
 
-
-const { PORT = 3000 } = process.env
-server.listen(PORT, () => {
-console.log('The server is up on port', PORT)
-});
+  const { PORT = 3000 } = process.env
+  //= process.env
+  server.listen(PORT, () => {
+  console.log('The server is up on port', PORT)
+  }); 
